@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<titlerity></title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+function ctck()
+{
+var sds = document.getElementById("footer");
+if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+}
+</script>
+
+</head>
+
+<body><table align="center" >
+  <tr>
+    <td>
+
+<div id="main_body">
+  <div id="navigation">
+<ul>
+<li><a class="active" href="index.html" title="home">Home</li>
+<li><a href="aboutus.html" class="home" title="about us">About Us</a></li>
+<li><a href="login.php" class="active" title="">Register</a></li>
+<li><a href="lost.html" class="sub" title="submission">Lost Bag</a></li>
+<li><a  class="active" href="found.html" class="home" title="archives">Found</a></li>
+<!--<li><a href="#" class="home" title="finance">Finance</a></li>-->
+<li><a href="contact.html" class="con" title="contact us">Contact</a></li>
+</ul>
+</div>
+</div>
+
+
+<body>
+<h1>Your Tag Code is </h1>
+<?php
+include('db.php');
+$sql="select max(tagcode) from acc_info";
+$query1=mysql_query($sql1);
+$ret1=mysql_fetch_row($query1);
+$tagcode=$ret1[0];
+echo "<html>";
+echo "<body>";
+echo "<h1>$tagcode</h1>";
+echo "</body>";
+echo "</html>";
+?>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Home</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/JavaScript">
+function validation(tagcode,found_loc,lugg_desc,cmp_name,con_info)
+{
+	if(tagcode.value == "" || found_loc.value == "" || lugg_desc.value == "" || con_info.value == "" || cmp_name.value == "")
+	{
+	alert("Please Enter Mandatory Information");
+	}
+}
+</script>
+<h1></center></center></h1>
+</head>
+
+<body><table align="center" >
+  <tr>
+    <td>
+
+
+<div id="main_body">
+  <div id="navigation">
+<ul>
+<li><a class="active" href="index.html" title="home">Home</li>
+<li><a href="aboutus.html" class="home" title="about us">About Us</a></li>
+<!--<li><a href="login.html" class="sub" title="network">Register</a></li>
+<li><a href="lost.html" class="sub" title="submission">Lost Bag</a></li>-->
+<li><a href="home_found.html" class="home" title="archives">Found others</a></li>
+<li><a href="found_op.html" class="home" title="archives">Found operator</a></li>
+<li><a href="complaint.html" class="home" title="finance">Suggestions</a></li>
+<li><a href="contact.html" class="con" title="contact us">Contact</a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+</head>
+
+<body>
+<h3><center>I've Found bag</center></h3>
+<form  name ="found_op" action="found_op_db.php" method="POST">
+
+<table align="center" cellpadding = "10">
+
+<tr>
+<td>Tag Code *</td>
+<td><input type="text" name="tagcode" maxlength="15"/>
+
+</td>
+</tr>
+
+<tr>
+<td>Luggage Description *<br /><br /><br /></td>
+<td><textarea name="lugg_desc" rows="4" cols="30"></textarea></td>
+</tr>
+
+<tr>
+<td>Found Location *</td>
+<td><input type="text" name="found_loc" maxlength="30"/>
+</td>
+</tr>
+
+<tr>
+<td>Company name *</td>
+<td><input type="text" name="cmp_name" maxlength="30"/>
+</td>
+</tr>
+
+<tr>
+<td>Contact Info *<br /><br /><br /></td>
+<td><textarea name="con_info" rows="3" cols="30"></textarea></td>
+</tr>
+
+<tr>
+<td>Required info for Verification</td>
+<td><input type="text" name="req_detail" maxlength="30"/>
+</td>
+</tr>
+
+</td>
+</tr>
+<tr>
+<td>Contact1</td>
+<td><input type="text" name="contact1" maxlength="20"/>
+</td>
+</tr>
+<tr>
+<td>Contact 2</td>
+<td><input type="text" name="contact2" maxlength="20"/>
+
+<tr>
+
+<td>Email id</td>
+<td><input type="text" name="email1" maxlength="30"/>
+
+</td>
+</tr>
+<tr>
+<td>Address <br /><br /><br /></td>
+<td><textarea name="address" rows="4" cols="30"></textarea></td>
+</tr>
+
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit" onClick="JavaScript:validation(tagcode,found_loc,lugg_desc,cmp_name,con_info)">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+
+</form>
+
+</body>
+</html>

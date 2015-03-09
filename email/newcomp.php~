@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>algorithm</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="wrap">
+	
+		<h2>Complaint Box</h2>
+		If you have any complaint regarding business of drug(medicine) or any illegal edible items or any illegal act that can cause death, you are free to complain here. <br>
+Your Complaint will be posted to us through Email</br> 
+		<!--comment form -->
+		<form id="form" method="post" action="email_success.php">
+			<!-- need to supply post id with hidden fild -->
+			
+			<label>
+				<span>Your UserName *</span>
+				<input type="text" name="name" id="comment-name" placeholder="Your name here...." required>
+			</label>
+			<label>
+				<span>Your Email ID *</span>
+				<input type="email" name="mail" id="comment-mail" placeholder="Your mail here...." required>
+			</label>
+			<label>
+				<span>Your Contact No. *</span>
+				<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comment here...." required></textarea>
+			</label> 
+			<label>
+				<span>Your Complaint *</span>
+				<textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comment here...." required></textarea>
+			</label>
+			<input type="submit" id="submit" value="Submit Complaint">
+		</form>
+	</div>
+</body>
+</html>

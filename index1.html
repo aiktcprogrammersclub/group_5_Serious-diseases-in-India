@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<titlerity></title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/JavaScript">
+function validation(tagcode,passwd)
+{
+	
+		if(tagcode.value == "")
+		{
+		alert("Please Enter Tagcode");
+		}	
+		else
+		{
+			if(passwd.value == "")
+			{
+			alert("Please Enter Password");
+			}
+					
+		}
+	}
+
+</script>
+
+</head>
+
+<body><table align="center" >
+  <tr>
+    <td>
+
+<div id="main_body">
+  <div id="navigation">
+<ul>
+<li><a class="active" href="index.html" title="home">Home</li>
+<li><a href="aboutus.html" class="home" title="about us">About Us</a></li>
+<!--<li><a href="login.html" class="sub" title="network">Register</a></li>
+<li><a href="lost.html" class="sub" title="submission">Lost Bag</a></li>-->
+
+<li><a href="complain.php" class="home" title="finance">Complain</a></li>
+<li><a href="contact.html" class="con" title="contact us">Contact</a></li>
+
+</ul>
+</div>
+</div>
+
+    <!<div id="content_area2_center">
+    <form id="index" name="index" method="post" action="index.php"><table width="188" cellpadding="2">
+  <tr>
+    <td>
+<h3><center>MEMBER'S LOGIN</center></h3>
+
+<table align="center" cellpadding = "10">
+
+
+
+<td>Username</td>
+<td><input type="text" name="tagcode" value="" maxlength="15"/>
+
+</td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" name="passwd" value="" maxlength="30" />
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit" onClick="JavaScript:validation(tagcode,passwd)">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+
+    
+
+<div id="footer">
+<div id="copy"> <a href="" title=""></a></div>
+
+
+</div>
+</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?php
+
+include('db.php');
+$uname=$_POST['uname'];
+$passwd=$_POST['passwd'];
+$passwde=md5($passwd);
+$status="No";
+//$admin="admin";
+
+/*if($uname==$admin)
+{
+	echo"uname admin1";
+}
+else
+{
+	echo"Not working";
+}
+if($uname=="admin")
+{
+	echo"uname admin2";
+}
+else
+{
+	echo"Not working";
+}
+*/
+
+if($uname=="" || $passwd =="")
+{
+	include('index.php');
+}
+else
+{
+	$sql="select * from login where uname='$uname'and passwd='$passwde' and status='$status'";
+	$query = mysql_query($sql);
+	$ret=mysql_fetch_row($query);
+	$count = $ret[0];
+		if($count>0)
+		{
+			$isAdmin=$ret[3];
+			session_start();
+			//echo"Query successfully executed";
+			if($isAdmin == 'true')
+			{
+			
+			$_SESSION['adm_tag']=$uname;
+			include('admin_prof.php');
+			}
+			else
+			{
+			
+			$sql1="select * from acc_info where uname='$uname'";
+			$query1=mysql_query($sql1);
+			$ret1=mysql_fetch_row($query1);
+			$count1=$ret1[0];
+			$_SESSION['u_prof_tag']=$uname;
+			$sql2="insert into session values('$uname')";
+				if($count1>0)
+				{
+					$query2=mysql_query($sql2);
+					if($query2)
+					{
+
+					include('user_profile.php');
+						
+					}
+					else
+					{
+					include('user_profile.php');
+					}
+				}
+				else
+				{
+				$_SESSION['u_reg_tag']=$uname;
+				include('register.php');	
+				}
+			}
+		}		
+		else
+		{
+		echo"<script>alert('Please Enter correct information')</script>";
+		//echo"Query not successfully executed";
+		include('index.php');
+		}
+	
+	
+}
+?>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>User</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+function validate(tagcode,oldpasswd,passwd,repass)
+{
+	if(tagcode.value == "")
+	{
+	alert("Please Enter Tagcode");
+	}
+	else
+	{
+		if(oldpasswd.value == "")
+		{
+		alert("Please Enter Old Password");
+		}
+		else
+		{
+			if(passwd.value == "")
+			{
+			alert("Please Enter Password");
+			}
+			else
+			{
+				if(repass.value == "")
+				{
+				alert("Please Enter Re-type Password");
+				}
+				else
+				{
+					if(passwd.value != repass.value)
+					{
+					alert("New Password Does not Match");
+					}
+				}
+			}
+		}
+	}
+}
+</script>
+<h1><center>USER</h1></center>
+</head>
+<form name="passwd" method="post" action="passwddb.php">
+<body><table align="center" >
+  <tr>
+    <td>
+
+
+<div id="main_body">
+  <div id="navigation">
+<ul>
+<li><a class="active" href="user_profile.html" title="home">Home</li>
+<li><a href="lost.html" class="home" title="about us">Lost</a></li>
+<!--<li><a href="login.html" class="home" title="network">Register</a></li>-->
+<li><a href="found.html" class="sub" title="submission">Found</a></li>
+<li><a href="passwd.html" class="home" title="archives">Password</a></li>
+<li><a href="travel.html" class="home" title="archives">Update Travel</a></li>		
+<li><a href="acc_update.html" class="home" title="archives">Update Acc</a></li>
+<li><a href="user_status.php" class="home" title="archives">Status</a></li>									
+<li><a href="index.html" class="con" title="contact us">Logout</a></li>
+
+</ul>
+</div>
+</div>
+<br>
+
+<h3><center>Change Password</center></h3>
+
+<table align="center" cellpadding = "10">
+
+<!--<tr>
+<td>Tag code</td>
+<td><input type="text" name="tagcode" maxlength="15" /></td>
+</tr>-->
+
+<tr>
+<td>Old password</td>
+<td><input type="password" name="oldpasswd" maxlength="30" />
+
+</td>
+</tr>
+
+<tr>
+<td>Enter password</td>
+<td><input type="password" name="passwd" maxlength="30" />
+
+</td>
+</tr>
+
+<tr>
+<td>RE-Enter Password</td>
+<td><input type="password" name="repass" maxlength="30" />
+
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit" onClick="JavaScript:validate(tagcode,oldpasswd,passwd,repass)">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+
+</body>
+</form>

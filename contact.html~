@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<titlerity></title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+function ctck()
+{
+var sds = document.getElementById("footer");
+if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+}
+</script>
+
+</head>
+
+<body><table align="center" >
+  <tr>
+    <td>
+
+<div id="main_body">
+  <div id="navigation">
+<ul>
+<li><a class="active" href="index.html" title="home">Home</li>
+<li><a href="aboutus.html" class="home" title="about us">About Us</a></li>
+
+<li><a href="complaint.html" class="home" title="finance">Suggestions</a></li>
+<li><a href="contact.html" class="con" title="contact us">Contact</a></li>
+</ul>
+</div>
+</div>
